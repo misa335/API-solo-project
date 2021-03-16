@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+/* .label {
+    float: center;
+    margin-right: 20px;
+    width: 80px;
+    padding-left: 10px;
+} */
