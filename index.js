@@ -54,7 +54,7 @@ app.post('/api/cafe/post', async (req, res) => {
         .catch((err) => console.log("error:",err));
 });
 
-//Update cafe info
+//Update cafe info  nameでもgetできるようにする！！
 app.put('/api/cafe/put/:id', async (req, res) => {
     knex('cafe_list').where('id', req.params.id)
                      .update({
@@ -66,7 +66,7 @@ app.put('/api/cafe/put/:id', async (req, res) => {
                      .catch((err) => console.log("error:",err));
 });
 
-//Delete cafe info
+//Delete cafe info  nameでもgetできるようにする！！
 app.delete('/api/cafe/delete/:id', async (req, res) => {
     await knex('cafe_list').where('id', req.params.id)
                            .del()
