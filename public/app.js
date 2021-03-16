@@ -1,7 +1,7 @@
 const getbtn = document.querySelector('.get');
 const view1 = document.querySelector('.view1');
 
-getbtn.addEventListener('click', async (req, res) => {
+getbtn.addEventListener('click', async () => {
     await fetch('http://localhost:3000/api/cafe')
     .then(res => res.json())
     .then(data => {
@@ -12,7 +12,7 @@ getbtn.addEventListener('click', async (req, res) => {
 
 const getSglBtn = document.querySelector('.singleGet');
 
-getSglBtn.addEventListener('click', async (req, res) => {
+getSglBtn.addEventListener('click', async () => {
     let idOrName = document.getElementById('idName').value;
     await fetch(`http://localhost:3000/api/cafe/${idOrName}`)
     .then(res => res.json())
@@ -24,8 +24,8 @@ getSglBtn.addEventListener('click', async (req, res) => {
 
 const postbtn = document.querySelector('.post');
 postbtn.addEventListener('click', async (req, res) => {
-    await
-    await fetch('http://localhost:3000/api/cafe/post')
+    
+    await fetch('http://localhost:3000/api/cafe')
     .then(res => res.json())
     .then(data => {
         console.log(data);
